@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="description" content="Independent, buyer-side sourcing for sampling equipment and consumables from China. Supplier verification, factory audits, and pre-shipment inspection — you pay the factory directly." />
+    <meta name="description" content="Independent, buyer-side sourcing for sampling equipment, consumables, and water quality testing instruments from China. Supplier verification, factory audits, and pre-shipment inspection — you pay the factory directly." />
     <link rel="icon" href="data:," />
     <title>Song Lab Sourcing — Buy Lab Equipment from China, Without the Guesswork</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -181,11 +181,29 @@
       .card .icon svg { width: 23px; height: 23px; }
       .card h3 { font-size: 1.06rem; font-weight: 700; margin-bottom: 7px; }
       .card p { color: var(--ink-soft); font-size: 0.95rem; line-height: 1.55; }
-      .coming-soon {
-        margin-top: 22px; font-size: 0.95rem; color: var(--ink-faint);
-        display: flex; align-items: center; gap: 10px;
+      .cat-head { margin: 38px 0 18px; max-width: 720px; }
+      .cat-head:first-of-type { margin-top: 0; }
+      .cat-label {
+        font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; font-weight: 500;
+        letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+        display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
       }
-      .coming-soon::before { content: ""; width: 26px; height: 1.5px; background: var(--accent); flex: none; }
+      .cat-label::after { content: ""; width: 34px; height: 1.5px; background: var(--accent); }
+      .cat-head h3 { font-size: 1.28rem; font-weight: 800; }
+      .cat-head p { margin-top: 7px; color: var(--ink-soft); font-size: 0.98rem; line-height: 1.6; }
+      .spec-check {
+        margin-top: 20px; background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--radius); padding: 22px 24px;
+      }
+      .spec-check h4 { margin: 0 0 12px; font-size: 0.98rem; font-weight: 800; }
+      .spec-check ul {
+        list-style: none; margin: 0; padding: 0;
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 28px;
+      }
+      @media (max-width: 640px) { .spec-check ul { grid-template-columns: 1fr; } }
+      .spec-check li { display: flex; gap: 10px; color: var(--ink-soft); font-size: 0.94rem; line-height: 1.5; }
+      .spec-check li svg { flex: none; width: 17px; height: 17px; margin-top: 4px; color: var(--teal-bright); }
+      .spec-check li strong { color: var(--ink); font-weight: 700; }
 
       /* Pricing */
       .price-note {
@@ -302,7 +320,7 @@
         <div class="wrap hero-grid">
           <div>
             <h1>Buy Lab Equipment from China — <span class="hl">Without the Guesswork.</span></h1>
-            <p class="sub">Independent, buyer-side sourcing for sampling equipment and consumables. We verify suppliers, inspect goods, and negotiate on your behalf — you contract and pay the factory directly.</p>
+            <p class="sub">Independent, buyer-side sourcing for sampling equipment, consumables, and water quality testing instruments. We verify suppliers, inspect goods, and negotiate on your behalf — you contract and pay the factory directly.</p>
             <div class="hero-ctas">
               <a class="btn btn-primary" href="mailto:jinghao.song@gmail.com?subject=Sourcing%20request%20%E2%80%93%20Song%20Lab%20Sourcing">Request a supplier report</a>
               <a class="btn btn-ghost" href="#process">See how it works</a>
@@ -345,7 +363,12 @@
         <div class="wrap">
           <div class="sec-head">
             <h2>What we source</h2>
-            <p>Our focus category is sampling equipment &amp; consumables — the gear field teams actually use, specified and checked by people who have run sampling programs themselves.</p>
+            <p>Two categories, both specified and checked by people who have run sampling and water-testing programs themselves: the gear field teams use on site, and the instruments that turn samples into results.</p>
+          </div>
+          <div class="cat-head">
+            <p class="cat-label">Category 01</p>
+            <h3>Sampling equipment &amp; consumables</h3>
+            <p>Our first category — everything a field team needs to collect a defensible sample and get it to the lab intact.</p>
           </div>
           <div class="cards">
             <article class="card">
@@ -379,7 +402,52 @@
               <p>Tedlar and foil gas sampling bags, plus canisters for air and stack-gas sampling programs.</p>
             </article>
           </div>
-          <p class="coming-soon">Water quality testing instruments (portable meters, COD analyzers) — coming soon.</p>
+          <div class="cat-head">
+            <p class="cat-label">Category 02</p>
+            <h3>Water quality testing instruments</h3>
+            <p>Our second category — field and benchtop instruments for water and wastewater testing. Instruments are not consumables: range, accuracy, calibration, and reagents decide whether the numbers hold up, so every model is checked on specs before it is quoted.</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M9 6h6"/><path d="M9 17.5h6"/><circle cx="12" cy="11.5" r="2.6"/></svg></div>
+              <h3>Portable multiparameter meters</h3>
+              <p>Handheld meters for pH, dissolved oxygen, conductivity, ORP, and temperature — checked for sensor type, calibration points, and replaceable electrodes.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 20v-6a6 6 0 0 1 12 0v6"/><path d="M9 9.5h.01M15 9.5h.01M12 7h.01"/></svg></div>
+              <h3>Turbidity meters</h3>
+              <p>Portable and benchtop turbidity meters for drinking water, surface water, and effluent — verified on measuring range, light source, and calibration standards supplied.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M7 21h10"/><path d="M7.5 12.5 10 9l2.5 4.5L15 10l1.5 2.5"/></svg></div>
+              <h3>COD analyzers &amp; digestion reactors</h3>
+              <p>COD measurement by spectrophotometric methods, with matching digestion reactors — checked for digestion temperature and time, vial compatibility, and reagent supply.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2.5h4"/><path d="M10.5 2.5v3L8 8v11a2.5 2.5 0 0 0 2.5 2.5h3A2.5 2.5 0 0 0 16 19V8l-2.5-2.5v-3"/><path d="M8.2 15.5c1.3.8 2.5-.8 3.8 0s2.5-.8 3.8 0"/></svg></div>
+              <h3>Ammonia &amp; nutrient analyzers</h3>
+              <p>Colorimetric analyzers and test kits for ammonia nitrogen, total phosphorus, and total nitrogen — matched to the method and range your discharge limits require.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/><path d="M5.5 5.5 3 3M21 3l-2.5 2.5"/></svg></div>
+              <h3>BOD analyzers &amp; incubators</h3>
+              <p>BOD5 measurement systems and thermostatic incubators — checked for bottle volume, stirring, temperature stability, and the 5-day test workflow.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 18V5.5"/><path d="M8.5 8.5h7M8.5 12h5"/></svg></div>
+              <h3>Spectrophotometers, reagents &amp; standards</h3>
+              <p>UV-Vis and visible spectrophotometers, plus the reagents, cuvettes, and calibration standards they run on — so the instrument arrives ready to work, not waiting on consumables.</p>
+            </article>
+          </div>
+          <div class="spec-check">
+            <h4>What we check before an instrument is quoted</h4>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Range &amp; accuracy</strong> — against your method and your limits, not the brochure headline.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Calibration</strong> — standards included, calibration points, and what a calibration certificate actually covers.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Reagents &amp; spares</strong> — reagent compatibility and shelf life, spare electrodes and sensors, and reordering lead time.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Fit for your lab</strong> — voltage and plug, English manual and interface, and warranty and after-sales terms in writing.</span></li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -501,7 +569,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.3L4.8 18a2.4 2.4 0 0 0 2.1 3.5h10.2a2.4 2.4 0 0 0 2.1-3.5L14 9.3V3"/><path d="M7.5 15h9"/></svg>
               <div>
                 <h3>15 years in environmental testing and lab building</h3>
-                <p>We know what good sampling gear looks like, down to bottle material and preservation chemistry.</p>
+                <p>We know what good sampling gear looks like, down to bottle material and preservation chemistry — and what a water-testing instrument must prove on range, accuracy, and calibration before its numbers mean anything.</p>
               </div>
             </div>
             <div class="why-item">
@@ -565,6 +633,14 @@
               <p class="answer">Yes — start small. Screening reports have no minimum order.</p>
             </details>
             <details>
+              <summary>Can you source water quality testing instruments, not just consumables?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="answer">Yes — that is our second category: portable meters, turbidity meters, COD and nutrient analyzers, BOD systems, and spectrophotometers. Send the parameters you test and the ranges you need; we match models to your method instead of pushing whatever a factory wants to move.</p>
+            </details>
+            <details>
+              <summary>Do instruments come with calibration and English documentation?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="answer">We confirm before you order: calibration standards included, what the calibration certificate covers, English manual and interface, and your local voltage and plug. Anything the factory cannot confirm in writing is flagged in the report — not discovered after delivery.</p>
+            </details>
+            <details>
               <summary>Which countries do you serve?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
               <p class="answer">Anywhere. Current focus: Southeast Asia, Africa, the Middle East, and South America.</p>
             </details>
@@ -576,7 +652,7 @@
       <section class="contact" id="contact">
         <div class="wrap">
           <h2>Tell us what you need.</h2>
-          <p>Send your item list, specs, or even a rough idea — we will reply with next steps and a clear quote for the service, before you commit to anything.</p>
+          <p>Send your item list, the parameters and ranges you test, or even a rough idea — we will reply with next steps and a clear quote for the service, before you commit to anything.</p>
           <a class="btn" href="mailto:jinghao.song@gmail.com?subject=Sourcing%20request%20%E2%80%93%20Song%20Lab%20Sourcing">
             <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
             jinghao.song@gmail.com
