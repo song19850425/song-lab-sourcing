@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Independent, buyer-side sourcing for sampling equipment and consumables from China. Supplier verification, factory audits, and pre-shipment inspection — you pay the factory directly." />
+    <link rel="icon" href="data:," />
+    <title>Song Lab Sourcing — Buy Lab Equipment from China, Without the Guesswork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-soft: #f2f6f6;
+        --bg-deep: #0a2e35;
+        --surface: #ffffff;
+        --ink: #12262b;
+        --ink-soft: #43565c;
+        --ink-faint: #6b7f85;
+        --line: #dce6e7;
+        --teal: #0b5563;
+        --teal-bright: #0e7c86;
+        --teal-tint: #e6f1f1;
+        --accent: #c98a2d;
+        --on-deep: #eef6f6;
+        --on-deep-soft: #a9c4c7;
+        --radius: 14px;
+        --header-h: 68px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1d21;
+          --bg-soft: #0f262b;
+          --bg-deep: #07181c;
+          --surface: #10262b;
+          --ink: #e8f1f1;
+          --ink-soft: #b3c6c9;
+          --ink-faint: #82999e;
+          --line: #22393f;
+          --teal: #4fb3bf;
+          --teal-bright: #63c3cd;
+          --teal-tint: #14333a;
+          --accent: #dca44a;
+          --on-deep: #eef6f6;
+          --on-deep-soft: #a9c4c7;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+      body {
+        margin: 0;
+        font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        font-size: 17px;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+      h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0; }
+      p { margin: 0; }
+      a { color: var(--teal); }
+      section { scroll-margin-top: calc(var(--header-h) + 16px); }
+
+      /* ---------- Header ---------- */
+      header {
+        position: sticky; top: 0; z-index: 50;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .header-in {
+        display: flex; align-items: center; justify-content: space-between;
+        gap: 16px; height: var(--header-h);
+      }
+      .brand {
+        display: flex; align-items: center; gap: 11px;
+        font-weight: 800; font-size: 1.06rem; letter-spacing: -0.01em;
+        color: var(--ink); text-decoration: none; white-space: nowrap;
+      }
+      .brand-mark {
+        width: 34px; height: 34px; border-radius: 9px; flex: none;
+        background: var(--teal); color: #fff;
+        display: grid; place-items: center;
+      }
+      .brand-mark svg { width: 19px; height: 19px; }
+      nav.main { display: flex; gap: 4px; }
+      nav.main a {
+        color: var(--ink-soft); text-decoration: none; font-weight: 600;
+        font-size: 0.94rem; padding: 10px 12px; border-radius: 8px;
+        min-height: 40px; display: inline-flex; align-items: center;
+      }
+      nav.main a:hover { color: var(--teal); background: var(--teal-tint); }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        font-weight: 700; font-size: 0.98rem; text-decoration: none;
+        border-radius: 10px; padding: 12px 22px; min-height: 48px;
+        border: 1.5px solid transparent; cursor: pointer;
+        transition: background .15s ease, border-color .15s ease;
+      }
+      .btn-primary { background: var(--teal); color: #fff; }
+      .btn-primary:hover { background: var(--teal-bright); }
+      .btn-ghost { border-color: var(--line); color: var(--ink); background: transparent; }
+      .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+      .btn-sm { padding: 9px 18px; min-height: 42px; font-size: 0.92rem; }
+      @media (max-width: 820px) { nav.main { display: none; } }
+
+      /* ---------- Hero ---------- */
+      .hero { padding: 84px 0 64px; background: var(--bg); }
+      .hero-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 56px; align-items: start; }
+      @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } .hero { padding: 56px 0 48px; } }
+      .hero h1 { font-size: clamp(2.1rem, 5vw, 3.35rem); font-weight: 800; max-width: 16ch; }
+      .hero h1 .hl { color: var(--teal); }
+      .hero .sub {
+        margin-top: 22px; font-size: 1.14rem; color: var(--ink-soft);
+        max-width: 56ch; line-height: 1.65;
+      }
+      .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+      .hero-note { margin-top: 16px; font-size: 0.9rem; color: var(--ink-faint); }
+
+      .hero-panel {
+        background: var(--bg-deep); color: var(--on-deep);
+        border-radius: var(--radius); padding: 28px 28px 24px;
+      }
+      .hero-panel h3 {
+        font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em;
+        text-transform: uppercase; color: var(--on-deep-soft); margin-bottom: 18px;
+      }
+      .hero-panel ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+      .hero-panel li { display: flex; gap: 12px; font-size: 0.98rem; line-height: 1.5; }
+      .hero-panel li svg { flex: none; width: 20px; height: 20px; margin-top: 2px; color: #63c3cd; }
+      .hero-panel .foot {
+        margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.14);
+        font-size: 0.88rem; color: var(--on-deep-soft);
+      }
+
+      /* ---------- Trust strip ---------- */
+      .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-soft); }
+      .trust-in {
+        display: flex; flex-wrap: wrap; align-items: center;
+        gap: 10px 0; padding: 18px 0;
+        font-weight: 700; font-size: 0.97rem;
+      }
+      .trust-in span { display: inline-flex; align-items: center; }
+      .trust-in span + span::before {
+        content: ""; width: 5px; height: 5px; border-radius: 50%;
+        background: var(--accent); margin: 0 18px; flex: none;
+      }
+      @media (max-width: 640px) {
+        .trust-in { flex-direction: column; align-items: flex-start; gap: 6px; }
+        .trust-in span + span::before { display: none; }
+      }
+
+      /* ---------- Sections ---------- */
+      .section { padding: 76px 0; }
+      .section.alt { background: var(--bg-soft); }
+      @media (max-width: 640px) { .section { padding: 56px 0; } }
+      .sec-head { max-width: 640px; margin-bottom: 40px; }
+      .sec-head h2 { font-size: clamp(1.65rem, 3.4vw, 2.2rem); font-weight: 800; }
+      .sec-head p { margin-top: 12px; color: var(--ink-soft); font-size: 1.05rem; }
+
+      /* Category cards */
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      @media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+      .card {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--radius); padding: 26px 24px;
+      }
+      .card .icon {
+        width: 44px; height: 44px; border-radius: 11px;
+        background: var(--teal-tint); color: var(--teal);
+        display: grid; place-items: center; margin-bottom: 16px;
+      }
+      .card .icon svg { width: 23px; height: 23px; }
+      .card h3 { font-size: 1.06rem; font-weight: 700; margin-bottom: 7px; }
+      .card p { color: var(--ink-soft); font-size: 0.95rem; line-height: 1.55; }
+      .coming-soon {
+        margin-top: 22px; font-size: 0.95rem; color: var(--ink-faint);
+        display: flex; align-items: center; gap: 10px;
+      }
+      .coming-soon::before { content: ""; width: 26px; height: 1.5px; background: var(--accent); flex: none; }
+
+      /* Pricing */
+      .price-note {
+        display: flex; gap: 12px; align-items: flex-start;
+        background: var(--teal-tint); border-radius: var(--radius);
+        padding: 16px 20px; margin-bottom: 28px;
+        font-size: 0.98rem; font-weight: 600; color: var(--ink);
+      }
+      .price-note svg { flex: none; width: 20px; height: 20px; margin-top: 2px; color: var(--teal); }
+      .tiers { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      @media (max-width: 760px) { .tiers { grid-template-columns: 1fr; } }
+      .tier {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--radius); padding: 30px 28px;
+        display: flex; flex-direction: column;
+      }
+      .tier.featured { border: 2px solid var(--teal); }
+      .tier .tag {
+        align-self: flex-start; font-size: 0.74rem; font-weight: 800;
+        letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--teal); background: var(--teal-tint);
+        padding: 5px 10px; border-radius: 999px; margin-bottom: 16px;
+      }
+      .tier h3 { font-size: 1.18rem; font-weight: 800; }
+      .tier .price { margin: 12px 0 4px; font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; color: var(--teal); }
+      .tier .price small { font-size: 0.95rem; font-weight: 600; color: var(--ink-faint); letter-spacing: 0; }
+      .tier ul { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
+      .tier li { display: flex; gap: 10px; color: var(--ink-soft); font-size: 0.96rem; line-height: 1.5; }
+      .tier li svg { flex: none; width: 17px; height: 17px; margin-top: 4px; color: var(--teal-bright); }
+
+      /* Steps */
+      .steps { display: grid; gap: 0; max-width: 780px; }
+      .step { display: flex; gap: 22px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+      .step:last-child { border-bottom: none; }
+      .step-num {
+        flex: none; width: 46px; height: 46px; border-radius: 50%;
+        border: 2px solid var(--teal); color: var(--teal);
+        font-family: "IBM Plex Mono", monospace; font-weight: 500; font-size: 1.05rem;
+        display: grid; place-items: center;
+      }
+      .step h3 { font-size: 1.08rem; font-weight: 700; margin-bottom: 4px; }
+      .step p { color: var(--ink-soft); font-size: 0.98rem; }
+      .pay-line {
+        margin-top: 28px; max-width: 780px;
+        border-left: 3px solid var(--accent); padding: 4px 0 4px 18px;
+        font-size: 1rem; color: var(--ink);
+      }
+      .pay-line strong { font-weight: 800; }
+
+      /* Why us */
+      .why { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 40px; }
+      @media (max-width: 700px) { .why { grid-template-columns: 1fr; } }
+      .why-item { display: flex; gap: 14px; padding: 6px 0; }
+      .why-item svg { flex: none; width: 22px; height: 22px; margin-top: 3px; color: var(--teal); }
+      .why-item h3 { font-size: 1.03rem; font-weight: 700; margin-bottom: 3px; }
+      .why-item p { color: var(--ink-soft); font-size: 0.96rem; }
+
+      /* FAQ */
+      .faq { max-width: 820px; display: grid; gap: 12px; }
+      details {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--radius);
+      }
+      summary {
+        cursor: pointer; list-style: none; min-height: 52px;
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+        padding: 16px 22px; font-weight: 700; font-size: 1.02rem;
+      }
+      summary::-webkit-details-marker { display: none; }
+      summary .chev { flex: none; width: 18px; height: 18px; color: var(--teal); transition: transform .18s ease; }
+      details[open ] summary .chev { transform: rotate(180deg); }
+      details .answer { padding: 0 22px 20px; color: var(--ink-soft); font-size: 0.98rem; max-width: 68ch; }
+
+      /* Contact */
+      .contact { background: var(--bg-deep); color: var(--on-deep); }
+      .contact .wrap { padding-top: 84px; padding-bottom: 84px; text-align: left; }
+      .contact h2 { font-size: clamp(2rem, 4.6vw, 3rem); font-weight: 800; max-width: 14ch; }
+      .contact p { margin-top: 16px; color: var(--on-deep-soft); font-size: 1.08rem; max-width: 52ch; }
+      .contact .btn { margin-top: 30px; background: #fff; color: var(--bg-deep); }
+      .contact .btn:hover { background: var(--teal-tint); }
+      .contact .reply { margin-top: 18px; font-size: 0.95rem; color: var(--on-deep-soft); display: flex; align-items: center; gap: 9px; }
+      .contact .reply svg { width: 18px; height: 18px; color: #63c3cd; flex: none; }
+
+      footer { padding: 30px 0 38px; border-top: 1px solid var(--line); }
+      footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+      footer p { font-size: 0.9rem; color: var(--ink-faint); }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="wrap header-in">
+        <a class="brand" href="#top" aria-label="Song Lab Sourcing — home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.3L4.8 18a2.4 2.4 0 0 0 2.1 3.5h10.2a2.4 2.4 0 0 0 2.1-3.5L14 9.3V3"/><path d="M7.5 15h9"/></svg>
+          </span>
+          Song Lab Sourcing
+        </a>
+        <nav class="main" aria-label="Main navigation">
+          <a href="#services">Services</a>
+          <a href="#process">How it works</a>
+          <a href="#why">Why us</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="mailto:jinghao.song@gmail.com?subject=Sourcing%20request%20%E2%80%93%20Song%20Lab%20Sourcing">Get a quote</a>
+      </div>
+    </header>
+
+    <main id="top">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <h1>Buy Lab Equipment from China — <span class="hl">Without the Guesswork.</span></h1>
+            <p class="sub">Independent, buyer-side sourcing for sampling equipment and consumables. We verify suppliers, inspect goods, and negotiate on your behalf — you contract and pay the factory directly.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="mailto:jinghao.song@gmail.com?subject=Sourcing%20request%20%E2%80%93%20Song%20Lab%20Sourcing">Request a supplier report</a>
+              <a class="btn btn-ghost" href="#process">See how it works</a>
+            </div>
+            <p class="hero-note">For environmental labs, universities, monitoring agencies, and NGOs — focused on Southeast Asia, Africa, the Middle East, and South America.</p>
+          </div>
+          <aside class="hero-panel" aria-label="How the model works">
+            <h3>The buyer-side model</h3>
+            <ul>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>You pay us a service fee — and pay the factory directly for the goods. No markup in between.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Every supplier is checked: license, export qualification, and a video factory tour.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Nothing ships without inspection evidence and your sign-off.</span>
+              </li>
+            </ul>
+            <p class="foot">First order 50% off — never free. Serious buyers only.</p>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="trust">
+        <div class="wrap trust-in">
+          <span>15 years in environmental testing</span>
+          <span>Buyer-paid, never a markup middleman</span>
+          <span>Live video inspections</span>
+          <span>You pay the factory directly</span>
+        </div>
+      </div>
+
+      <!-- What we source -->
+      <section class="section" id="source">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>What we source</h2>
+            <p>Our focus category is sampling equipment &amp; consumables — the gear field teams actually use, specified and checked by people who have run sampling programs themselves.</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M8 6h8l-1 4H9L8 6Z"/><path d="M10 10v6a2 2 0 0 0 4 0v-6"/><path d="M6 21h12"/></svg></div>
+              <h3>Water samplers</h3>
+              <p>Depth samplers, bailers, and peristaltic pumps for surface water, groundwater, and wastewater sampling.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10"/><path d="m8 9 4 4 4-4"/><path d="M4 21h16"/><path d="M7 17.5c1.7 1 3.3-1 5 0s3.3-1 5 0"/></svg></div>
+              <h3>Soil samplers</h3>
+              <p>Augers, core samplers, and ring-knife kits for environmental soil investigation and remediation work.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2.5h4"/><path d="M10.5 2.5v3L8 8v11a2.5 2.5 0 0 0 2.5 2.5h3A2.5 2.5 0 0 0 16 19V8l-2.5-2.5v-3"/><path d="M8 13h8"/></svg></div>
+              <h3>Sample bottles &amp; containers</h3>
+              <p>Glass and PE bottles in the sizes and materials your methods require — amber glass, sterile, pre-preserved.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v5.5L5.2 18a2.4 2.4 0 0 0 2.1 3.5h9.4a2.4 2.4 0 0 0 2.1-3.5L14 8.5V3"/><path d="M7.8 15h8.4"/></svg></div>
+              <h3>Preservation kits &amp; reagents</h3>
+              <p>Acid and alkali preservation kits matched to the analyte — so samples survive the trip to the lab.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 12 4l9 4.5v7L12 20l-9-4.5v-7Z"/><path d="M3 8.5 12 13l9-4.5"/><path d="M12 13v7"/></svg></div>
+              <h3>Field consumables</h3>
+              <p>Cool boxes, labels, filters, gloves, and the small items that decide whether a sampling day succeeds.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0v9a5 5 0 0 1-10 0V8Z"/><path d="M12 2v3"/><path d="M9 21h6"/></svg></div>
+              <h3>Gas sampling bags &amp; canisters</h3>
+              <p>Tedlar and foil gas sampling bags, plus canisters for air and stack-gas sampling programs.</p>
+            </article>
+          </div>
+          <p class="coming-soon">Water quality testing instruments (portable meters, COD analyzers) — coming soon.</p>
+        </div>
+      </section>
+
+      <!-- Services & pricing -->
+      <section class="section alt" id="services">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Services &amp; pricing</h2>
+            <p>Four ways to work with us, from a one-off supplier check to a full lab package. Pick the level of involvement you need.</p>
+          </div>
+          <div class="price-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span>Reference pricing — final quote depends on scope. First order 50% off, never free.</span>
+          </div>
+          <div class="tiers">
+            <article class="tier">
+              <span class="tag">Start here</span>
+              <h3>Supplier Screening Report</h3>
+              <p class="price">$500 <small>per report</small></p>
+              <ul>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>3–5 vetted suppliers per item</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Business-license and export-qualification checks</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Quote comparison table</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>A written recommendation</span></li>
+              </ul>
+            </article>
+            <article class="tier">
+              <span class="tag">On the ground</span>
+              <h3>Factory Audit / Pre-shipment Inspection</h3>
+              <p class="price">$800 <small>/ day + travel</small></p>
+              <ul>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>On-site or live-video audit</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Technical spec verification, not just counting boxes</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Photo, video and test-data report</span></li>
+              </ul>
+            </article>
+            <article class="tier featured">
+              <span class="tag">Full service</span>
+              <h3>End-to-End Sourcing Agent</h3>
+              <p class="price">3%–5% <small>of order value</small></p>
+              <ul>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Spec confirmation and sourcing</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Negotiation on your behalf</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Sample inspection and production follow-up</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Pre-shipment inspection and forwarder coordination</span></li>
+              </ul>
+            </article>
+            <article class="tier">
+              <span class="tag">New labs</span>
+              <h3>Lab Package Sourcing Advisory</h3>
+              <p class="price"><small>from</small> $3,000</p>
+              <ul>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Full consumables &amp; equipment package for a new lab</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Coverage from sampling to benchtop</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>One coordinated sourcing plan instead of dozens of separate orders</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="section" id="process">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>How it works</h2>
+            <p>Five steps from your brief to goods on a ship — with evidence at every checkpoint.</p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <span class="step-num">1</span>
+              <div>
+                <h3>Send your brief</h3>
+                <p>Specs, quantities, target price, destination.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-num">2</span>
+              <div>
+                <h3>We confirm specs and source</h3>
+                <p>We confirm the specs with you, then source 3–5 factories that can actually meet them.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-num">3</span>
+              <div>
+                <h3>You receive a shortlist report</h3>
+                <p>Verified licenses, quotes, and a recommendation — so you choose with the full picture.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-num">4</span>
+              <div>
+                <h3>Samples and inspection</h3>
+                <p>Live video or on-site, checked against your spec — not just counted.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-num">5</span>
+              <div>
+                <h3>Production and shipping</h3>
+                <p>Production, final inspection, and shipping via forwarder.</p>
+              </div>
+            </div>
+          </div>
+          <p class="pay-line"><strong>Payment:</strong> Service fees are 50% upfront, 50% on report delivery. Goods are always paid directly to the factory under your own contract.</p>
+        </div>
+      </section>
+
+      <!-- Why us -->
+      <section class="section alt" id="why">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Why us</h2>
+            <p>Most sourcing agents know trade paperwork. We know the equipment — because we have spent 15 years using it.</p>
+          </div>
+          <div class="why">
+            <div class="why-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.3L4.8 18a2.4 2.4 0 0 0 2.1 3.5h10.2a2.4 2.4 0 0 0 2.1-3.5L14 9.3V3"/><path d="M7.5 15h9"/></svg>
+              <div>
+                <h3>15 years in environmental testing and lab building</h3>
+                <p>We know what good sampling gear looks like, down to bottle material and preservation chemistry.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+              <div>
+                <h3>Buyer-side only</h3>
+                <p>We work for you, not the factory. Our fee comes from you, so our advice points your way.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="m8.5 11 2 2 3.5-4"/></svg>
+              <div>
+                <h3>Technical verification, not box-counting</h3>
+                <p>Inspections check specs, materials, and function — the things that decide whether gear works in the field.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 6.5c-.8-1.2-2.6-2-5-2-3 0-5 1.3-5 3.2 0 4.4 10 2.4 10 6.6 0 1.9-2 3.2-5 3.2-2.4 0-4.2-.8-5-2"/></svg>
+              <div>
+                <h3>Transparent fees, no hidden markup</h3>
+                <p>You see the factory's price and our fee, separately. Nothing is padded into the goods.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-3.5-8-6.6-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 4.4-4 7.5-8 11Z" transform="scale(0.92) translate(1 1)"/></svg>
+              <div>
+                <h3>Small orders welcome</h3>
+                <p>Start small, scale when trust is earned. A screening report is a low-risk first step.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>FAQ</h2>
+            <p>The questions overseas buyers ask us first.</p>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Do you buy and resell the goods?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="answer">No. You contract and pay the factory directly. We are your eyes and hands in China, paid by service fee.</p>
+            </details>
+            <details>
+              <summary>How do you verify a supplier?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="answer">Business-license checks, export qualification, video factory tour, and sample testing against your spec.</p>
+            </details>
+            <details>
+              <summary>What if the goods fail inspection?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="answer">You get the photo, video and test report before shipment and decide — nothing ships without your sign-off.</p>
+            </details>
+            <details>
+              <summary>What are the payment terms?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="answer">50% upfront, 50% on delivery of the report. Goods are paid directly to the factory per your contract.</p>
+            </details>
+            <details>
+              <summary>Do you work with small orders?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="answer">Yes — start small. Screening reports have no minimum order.</p>
+            </details>
+            <details>
+              <summary>Which countries do you serve?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="answer">Anywhere. Current focus: Southeast Asia, Africa, the Middle East, and South America.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <div class="wrap">
+          <h2>Tell us what you need.</h2>
+          <p>Send your item list, specs, or even a rough idea — we will reply with next steps and a clear quote for the service, before you commit to anything.</p>
+          <a class="btn" href="mailto:jinghao.song@gmail.com?subject=Sourcing%20request%20%E2%80%93%20Song%20Lab%20Sourcing">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            jinghao.song@gmail.com
+          </a>
+          <p class="reply">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            We reply within one business day.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p><strong>Song Lab Sourcing</strong> · Independent sourcing service · Zhengzhou, China</p>
+        <p>Prices in USD, reference only.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
